@@ -16,18 +16,34 @@
     <p>Powered by
         <a href="https://gohugo.io/">Hugo</a>
         and
-        <a href="https://github.com/tomfran/typo">tomfran/typo</a>
+        <a href="https://github.com/tomfran/typo">typo</a>
     </p>
     {{ end }}
     
     {{ with .Site.Params.footerContent }}
     <p>{{ . | markdownify }}</p>
     {{ end }}
+
+{{ if .IsTranslated }}
+<p>Also translated in 
+    {{ range .Translations }}
+     <a href="{{ .RelPermalink }}">{{ .Language.LanguageName }} </a>
+    {{ end }}
+</p>
 {{ end }}
 
+{{ end }}
+
+
+
 <div class="text-center">
-    <p class="text-sm text-tertiary-text"> @2018 codedump <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener noreferrer" target="_blank">CC BY-SA</a>Powered by
-        <a href="https://gohugo.io/">Hugo</a>and <a href="https://github.com/tomfran/typo">tomfran/typo</a>
+    <p class="text-sm text-tertiary-text"> @2018 codedump <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener noreferrer" target="_blank">CC BY-SA</a>Powered by<a href="https://gohugo.io/">Hugo</a>and<a href="https://github.com/tomfran/typo">typo</a>
+{{ if .IsTranslated }}
+Also translated in 
+    {{ range .Translations }}
+     <a href="{{ .RelPermalink }}">{{ .Language.LanguageName }} </a>
+    {{ end }}
+{{ end }}
 </div>
 
 </div>
