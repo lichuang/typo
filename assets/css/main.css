@@ -87,7 +87,8 @@ input {
 /* Code blocks */
 
 .copy-code-button {
-  background-color: var(--background);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #f8f8f2;
   font-family: var(--font-mono);
   padding: 3px 6px;
   font-size: 0.8em;
@@ -107,16 +108,18 @@ pre:hover .copy-code-button {
 pre {
   position: relative;
   padding: var(--code-padding);
-  border: 1px solid var(--code-border);
   overflow: scroll;
   border-radius: var(--code-border-radius);
   margin-top: var(--code-margin-top);
   margin-bottom: var(--code-margin-bottom);
-  background-color: var(--code-background) !important;
+  background-color: #272822 !important;
+  color: #f8f8f2;
   overflow-x: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  line-height: 1.3em;
+  line-height: 1.4;
+  font-size: .85em;
+  border: none;
 }
 
 pre::-webkit-scrollbar {
@@ -551,6 +554,7 @@ figcaption {
 /* Code in paragraphs */
 
 p code {
+  color: #bf616a;
   background-color: var(--code-background);
   border-radius: 3px;
   padding: 2px;
