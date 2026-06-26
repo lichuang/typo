@@ -32,3 +32,54 @@
 .footer-social-icons a:not(:last-of-type) {
   margin-inline-end: 12px;
 }
+
+/* Book promotion sidebar */
+.book-promo {
+  display: none;
+}
+
+@media screen and (min-width: 1280px) {
+  .book-promo {
+    display: block;
+    position: fixed;
+    top: 8rem;
+    left: calc(50% + 400px);
+    width: 200px;
+    padding: 1rem;
+    border: 1px solid var(--content-secondary);
+    border-radius: 8px;
+    background: var(--background);
+    color: var(--content-primary);
+    font-size: 0.9rem;
+    line-height: 1.4;
+    z-index: 10;
+  }
+
+  .book-promo h2 {
+    font-size: 1.1rem;
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    color: var(--heading-color);
+  }
+
+  .book-promo img {
+    display: block;
+    width: 100%;
+    max-width: 160px;
+    height: auto;
+    margin: 0 auto 0.8rem;
+    border: 1px solid var(--content-secondary);
+    border-radius: 4px;
+  }
+
+  .book-promo p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .book-promo a {
+    color: var(--content-primary);
+  }
+}

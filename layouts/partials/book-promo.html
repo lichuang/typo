@@ -1,0 +1,33 @@
+<aside class="book-promo" aria-label="Book promotion">
+  {{ if eq .Site.Language.Lang "zh" }}
+  <h2>我的书</h2>
+  <a href="https://leanpub.com/distributed-system-illustrated" target="_blank" rel="noopener noreferrer">
+    <img src="/media/dist-system-en/book-cover.png"
+         srcset="/media/dist-system-en/book-cover.png 1x, /media/dist-system-en/book-cover-2x.png 2x"
+         alt="Distributed System Illustrated"
+         width="320"
+         height="414">
+  </a>
+  <p>我的书
+    <a href="https://leanpub.com/distributed-system-illustrated" target="_blank" rel="noopener noreferrer">
+      《<em>Distributed System Illustrated</em>》
+    </a>
+    通过清晰的图解讲解分布式系统——从时钟、CAP 到 Paxos、Raft 和分布式事务。
+  </p>
+  {{ else }}
+  <h2>My book</h2>
+  <a href="https://leanpub.com/distributed-system-illustrated" target="_blank" rel="noopener noreferrer">
+    <img src="/media/dist-system-en/book-cover.png"
+         srcset="/media/dist-system-en/book-cover.png 1x, /media/dist-system-en/book-cover-2x.png 2x"
+         alt="Distributed System Illustrated"
+         width="320"
+         height="414">
+  </a>
+  <p>My book,
+    <a href="https://leanpub.com/distributed-system-illustrated" target="_blank" rel="noopener noreferrer">
+      <em>Distributed System Illustrated</em>
+    </a>,
+    explains distributed systems through clear diagrams — from clocks and CAP to Paxos, Raft, and distributed transactions.
+  </p>
+  {{ end }}
+</aside>
