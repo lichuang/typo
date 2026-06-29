@@ -83,3 +83,44 @@
     color: var(--content-primary);
   }
 }
+
+/* Book CTA at the bottom of chapter pages */
+.book-cta {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding: 1.2rem;
+  border: 1px solid var(--content-secondary);
+  border-radius: 8px;
+  background: var(--background);
+  color: var(--content-primary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.book-cta p {
+  margin: 0 0 0.6rem;
+}
+
+.book-cta p:last-of-type {
+  margin-bottom: 1rem;
+}
+
+.book-cta-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.book-cta-button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  background: var(--content-primary);
+  color: var(--background) !important;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.book-cta-button:hover {
+  opacity: 0.85;
+}

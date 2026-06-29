@@ -1,0 +1,13 @@
+{{/* Search engine site-verification meta tags.
+     Fill the corresponding values in your Hugo config (e.g. typo.toml)
+     after verifying ownership in Google Search Console / Bing Webmaster Tools.
+*/}}
+{{ with .Site.Params.googleSiteVerification }}
+<meta name="google-site-verification" content="{{ . }}">
+{{ end }}
+{{ with .Site.Params.bingSiteVerification }}
+<meta name="msvalidate.01" content="{{ . }}">
+{{ end }}
+{{ with .Site.Params.baiduSiteVerification }}
+<meta name="baidu-site-verification" content="{{ . }}">
+{{ end }}

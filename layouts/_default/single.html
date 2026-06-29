@@ -86,6 +86,8 @@
 
   {{/* Next prev controls */}}
 
+  {{ partial "book-cta.html" . }}
+
   {{ if not (.Param "hidePagination") }}
   {{ partial "pagination-single.html" . }}
   {{ end }}

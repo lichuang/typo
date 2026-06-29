@@ -1,0 +1,15 @@
+{{ if .Params.bookSchema }}
+{{ $data := dict
+  "@context" "https://schema.org"
+  "@type" "Book"
+  "name" "Distributed System Illustrated: A Visual Guide for Engineers"
+  "author" (dict "@type" "Person" "name" "Lichuang")
+  "description" (.Params.Description | default (.Summary | plainify))
+  "image" ("/media/dist-system-en/book-cover.png" | absURL)
+  "inLanguage" .Language.Lang
+  "url" "https://leanpub.com/distributed-system-illustrated"
+  "datePublished" "2026-06-25"
+  "offers" (dict "@type" "Offer" "url" "https://leanpub.com/distributed-system-illustrated" "availability" "https://schema.org/InStock")
+}}
+<script type="application/ld+json">{{ $data | jsonify | safeJS }}</script>
+{{ end }}

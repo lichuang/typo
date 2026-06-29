@@ -44,10 +44,15 @@ and build the img class string as "img-tag1 img-tag2 ..."
 
 
 {{/* Use the computed classes on the rendered figure */}}
+{{/* Fallback alt text for accessibility/SEO when markdown alt is empty */}}
+{{- $alt := .Text -}}
+{{- if not $alt -}}
+  {{- $alt = .Title | default .Page.Title | default "Illustration" -}}
+{{- end -}}
 <figure class="{{ $classes }}">
 
     <div>
-        <img loading="lazy" alt="{{ .Text }}" src="{{ $url }}" {{ with $imgResource }}width="{{ .Width }}" height="{{ .Height }}"{{ end }}>
+        <img loading="lazy" decoding="async" alt="{{ $alt }}" src="{{ $url }}" {{ with $imgResource }}width="{{ .Width }}" height="{{ .Height }}"{{ end }}>
     </div>
 
     {{ with .Title }}
