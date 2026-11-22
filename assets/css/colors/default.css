@@ -1,10 +1,10 @@
 :root {
-    --content-primary: #515151;
-    --content-secondary: rgb(117, 117, 117);
-    --heading-color: #313131;
-    --background: rgb(255, 255, 255);
-    --code-background: rgb(249, 249, 249);
-    --code-border: rgb(229, 229, 229);
+    --content-primary: #333;
+    --content-secondary: #555;
+    --heading-color: #333;
+    --background: #fdfdfd;
+    --code-background: #f1f1f1;
+    --code-border: #e5e5e5;
 }
 
 .dark {

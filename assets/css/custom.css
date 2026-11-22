@@ -124,3 +124,66 @@
 .book-cta-button:hover {
   opacity: 0.85;
 }
+
+/* ============================================
+   Style ported from fleurer.github.io
+   ============================================ */
+
+/* Subtle top border line */
+body {
+  border-top: 2px solid #ddd;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Links: dark pink, blue on hover, no underline */
+a {
+  color: #A30052;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #003DF5;
+}
+
+/* <b> stays regular, <strong> (markdown **) stays bold */
+b {
+  font-weight: 400;
+}
+
+strong {
+  font-weight: bold;
+}
+
+/* Flatter heading weights, closer to body text */
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+/* Date/metadata lines in faint gray */
+.line-date,
+.single-readtime {
+  color: #ccc;
+}
+
+/* Inline code: light gray background, gray text */
+p code,
+li code,
+table code {
+  color: #555;
+  background-color: #f1f1f1;
+}
+
+/* Code blocks: dark gray background */
+pre {
+  background-color: #444 !important;
+}
+
+/* Blockquote: smaller, gray */
+blockquote {
+  font-size: 14px;
+}
