@@ -43,7 +43,7 @@
     display: block;
     position: fixed;
     top: 8rem;
-    left: calc(50% + 400px);
+    left: calc(50% + 470px);
     width: 200px;
     padding: 1rem;
     border: 1px solid var(--content-secondary);
@@ -186,4 +186,11 @@ pre {
 /* Blockquote: smaller, gray */
 blockquote {
   font-size: 14px;
+}
+
+/* Post list: keep the date on a single line */
+.line-date {
+  min-width: 130px;
+  max-width: 130px;
+  white-space: nowrap;
 }
