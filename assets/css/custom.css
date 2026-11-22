@@ -194,3 +194,8 @@ blockquote {
   max-width: 130px;
   white-space: nowrap;
 }
+
+/* Code font: Fira Code (as blog.mrcroxx.com) */
+code {
+  font-family: "Fira Code", var(--font-mono);
+}
