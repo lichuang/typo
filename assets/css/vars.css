@@ -12,8 +12,8 @@
     --header-menu-top-gap: 1rem;
 
     /* Typography */
-    --font-body: "Literata", Georgia, Cambria, "Noto Serif", "Droid Serif", ui-serif, serif;
-    --font-mono: "Monaspace", ui-monospace, monospace;
+    --font-body: "Newsreader", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+    --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", "Cascadia Mono", Menlo, Consolas, "Liberation Mono", monospace;
 
     --h1-margin-top: 2rem;
     --h1-margin-bottom: 1.5rem;

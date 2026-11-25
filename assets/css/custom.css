@@ -195,7 +195,10 @@ blockquote {
   white-space: nowrap;
 }
 
-/* Code font: Fira Code (as blog.mrcroxx.com) */
-code {
-  font-family: "Fira Code", var(--font-mono);
+/* Code font: JetBrains Mono (as fzakaria.com) */
+
+/* Tighter spacing between an intro paragraph and the list that follows it */
+p:has(+ ul),
+p:has(+ ol) {
+  margin-bottom: 0;
 }
