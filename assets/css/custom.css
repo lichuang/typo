@@ -170,17 +170,148 @@ h6 {
   color: #ccc;
 }
 
-/* Inline code: light gray background, gray text */
-p code,
-li code,
-table code {
-  color: #555;
-  background-color: #f1f1f1;
+/* Inline code (as fzakaria.com) */
+:not(pre) > code {
+  font-size: .82em;
+  background: var(--paper-raised);
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  padding: .08em .26em;
+  color: var(--ink);
 }
 
-/* Code blocks: dark gray background */
+/* Code blocks (as fzakaria.com): warm gray bg, thin border with left accent */
+:root {
+  --paper-raised: #ebe6da;
+  --rule: #dcd5c5;
+  --rule-strong: #c2b9a6;
+  --ink: #1a1815;
+  --ink-muted: #565046;
+  --ink-faint: #6f685b;
+  --syn-comment: #6f685b;
+  --syn-keyword: #9a3d05;
+  --syn-string: #3f6b32;
+  --syn-number: #6b4fa8;
+  --syn-func: #1c5570;
+  --syn-type: #7a6114;
+  --syn-var: #7c4a2d;
+  --syn-punct: #6b6558;
+  --syn-error: #b1201d;
+  --syn-error-bg: #b1201d1a;
+  --syn-ins-bg: #1a7f3714;
+  --syn-del-bg: #b1201d14;
+  --syn-ins-fg: #1a6d33;
+  --syn-del-fg: #a3231f;
+  --syn-mark: #7a61141a;
+}
+
 pre {
-  background-color: #444 !important;
+  font-size: .78rem;
+  line-height: 1.55;
+  background-color: var(--paper-raised) !important;
+  border: 1px solid var(--rule);
+  border-left: 2px solid var(--rule-strong);
+  border-radius: 3px;
+  padding: .85rem 1rem;
+  color: var(--ink);
+}
+
+pre code {
+  background: none;
+  border: 0;
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+}
+
+.copy-code-button {
+  background-color: var(--background);
+  color: var(--content-primary);
+  border: 1px solid var(--rule);
+}
+
+/* Chroma syntax colors (as fzakaria.com) */
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm,
+.highlight .cp, .highlight .cpf, .highlight .c1, .highlight .cs {
+  color: var(--syn-comment);
+  font-style: italic;
+}
+
+.highlight .k, .highlight .kc, .highlight .kd, .highlight .kn,
+.highlight .kp, .highlight .kr, .highlight .kv {
+  color: var(--syn-keyword);
+}
+
+.highlight .kt, .highlight .nc, .highlight .nn, .highlight .no, .highlight .ne {
+  color: var(--syn-type);
+}
+
+.highlight .nf, .highlight .fm, .highlight .nb, .highlight .bp,
+.highlight .na, .highlight .nt {
+  color: var(--syn-func);
+}
+
+.highlight .nv, .highlight .vc, .highlight .vg, .highlight .vi,
+.highlight .vm, .highlight .nl, .highlight .py {
+  color: var(--syn-var);
+}
+
+.highlight .s, .highlight .sa, .highlight .sb, .highlight .sc,
+.highlight .dl, .highlight .sd, .highlight .s2, .highlight .se,
+.highlight .sh, .highlight .si, .highlight .sx, .highlight .s1,
+.highlight .ss, .highlight .sr {
+  color: var(--syn-string);
+}
+
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh,
+.highlight .mi, .highlight .mo, .highlight .il {
+  color: var(--syn-number);
+}
+
+.highlight .o, .highlight .ow, .highlight .p, .highlight .pi, .highlight .ni {
+  color: var(--syn-punct);
+}
+
+.highlight .err {
+  color: var(--syn-error);
+  background-color: var(--syn-error-bg);
+  border-radius: 2px;
+}
+
+.highlight .gd {
+  color: var(--syn-del-fg);
+  background-color: var(--syn-del-bg);
+}
+
+.highlight .gi {
+  color: var(--syn-ins-fg);
+  background-color: var(--syn-ins-bg);
+}
+
+.highlight .gh, .highlight .gu {
+  color: var(--syn-func);
+  font-weight: 600;
+}
+
+.highlight .gp {
+  color: var(--syn-comment);
+  user-select: none;
+}
+
+.highlight .go {
+  color: var(--ink-muted);
+}
+
+.highlight .ge {
+  font-style: italic;
+}
+
+.highlight .gs {
+  font-weight: 700;
+}
+
+.highlight .gr, .highlight .gt {
+  color: var(--syn-error);
 }
 
 /* Blockquote: smaller, gray */
