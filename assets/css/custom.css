@@ -202,3 +202,32 @@ p:has(+ ul),
 p:has(+ ol) {
   margin-bottom: 0;
 }
+
+/* Tighter spacing between a paragraph and a following code block */
+/* Hugo wraps <pre> in <div class="highlight">, so target the wrapper */
+p:has(+ .highlight) {
+  margin-bottom: 0;
+}
+
+.highlight {
+  margin-top: var(--code-margin-top);
+  margin-bottom: var(--code-margin-bottom);
+}
+
+.highlight pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+p + .highlight {
+  margin-top: 0.5rem;
+}
+
+/* Fenced code blocks without a language are plain <pre> (no .highlight wrapper) */
+p:has(+ pre) {
+  margin-bottom: 0;
+}
+
+p + pre {
+  margin-top: 0.5rem;
+}
