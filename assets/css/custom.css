@@ -354,12 +354,23 @@ p + .highlight {
   margin-top: 0.5rem;
 }
 
+/* Lists followed by a code block get the same tight spacing */
+ul + .highlight,
+ol + .highlight {
+  margin-top: 0.5rem;
+}
+
 /* Fenced code blocks without a language are plain <pre> (no .highlight wrapper) */
 p:has(+ pre) {
   margin-bottom: 0;
 }
 
 p + pre {
+  margin-top: 0.5rem;
+}
+
+ul + pre,
+ol + pre {
   margin-top: 0.5rem;
 }
 
