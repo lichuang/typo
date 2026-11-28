@@ -385,3 +385,12 @@ p + pre {
 .header p a:hover {
   color: #9e3413;
 }
+
+/* Tighter spacing between a heading and the paragraph that follows it */
+:is(h1, h2, h3, h4, h5, h6):has(+ p) {
+  margin-bottom: 0;
+}
+
+:is(h1, h2, h3, h4, h5, h6) + p {
+  margin-top: 0;
+}
