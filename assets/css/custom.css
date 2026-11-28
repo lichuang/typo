@@ -362,3 +362,26 @@ p:has(+ pre) {
 p + pre {
   margin-top: 0.5rem;
 }
+
+/* Blend white-background images into the cream page background */
+.single-content img {
+  mix-blend-mode: multiply;
+}
+
+/* Header nav typography (as fzakaria.com) */
+.header p {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: .11em;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-faint);
+}
+
+.header p a {
+  color: var(--ink-muted);
+  text-decoration: none;
+}
+
+.header p a:hover {
+  color: #9e3413;
+}
